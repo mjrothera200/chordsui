@@ -122,7 +122,7 @@ class ChordTable extends Component {
 
 ChordTable.defaultProps = {
     targetchord: 'C',
-    targetcomplexity: 'colors',
+    targetcomplexity: 'passing',
     targetprogression: 'ordered'
 };
 

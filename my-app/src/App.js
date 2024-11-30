@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import Select from 'react-select'
 import logo from './logo.svg';
 import './App.css';
@@ -7,11 +7,13 @@ import './components/ChordTable/_chordtable.css';
 import ChordTable from './components/ChordTable'
 
 const complexity = [
-  { value: "colors", label: 'Colors' },
+  { value: "passing", label: 'Passing' },
+  { value: "uppers1", label: 'Uppers 1' },
+  { value: "uppers2", label: 'Uppers 2' },
+  { value: "uppers3", label: 'Uppers 3' },
+  { value: "uppers4", label: 'Uppers Summary' },
+  { value: "rootless", label: 'Rootless' },
   { value: "simple", label: 'Simple' },
-  { value: "medium", label: 'Medium' },
-  { value: "complex", label: 'Complex' },
-  { value: "drop2", label: 'Drop 2' }
 ]
 
 const defaultKey = { label: "C", value: "C" }
@@ -24,6 +26,8 @@ class App extends Component {
     chords: [ { value: "D", label: 'D' } ],
     majorProgressions: [ { value: "ordered", label: 'ordered' } ]
   }
+ 
+ 
   getChords() {
     const headers = { 'x-api-key': process.env.REACT_APP_CHORD_QUERY };
     try {
