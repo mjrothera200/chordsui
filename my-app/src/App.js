@@ -12,6 +12,7 @@ const complexity = [
   { value: "uppers2", label: 'Uppers 2' },
   { value: "uppers3", label: 'Uppers 3' },
   { value: "uppers4", label: 'Uppers Summary' },
+  { value: "uppers5", label: 'Uppers Summary (No Rule)' },
   { value: "rootless", label: 'Rootless' },
   { value: "simple", label: 'Simple' },
 ]
